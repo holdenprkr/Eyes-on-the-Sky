@@ -1,0 +1,17 @@
+section {
+  border: 1px solid black;
+  margin: 0px 8px 50px 8px;
+}
+
+body {
+  text-align: center;
+  background-color: goldenrod;
+  margin: 0px;
+}
+
+nav {
+  background-color: darkblue;
+  color: white;
+  padding: 6px 0px;
+  margin-bottom: 20px;
+}
