@@ -33,6 +33,7 @@ const bodyHTML = () => {
       </select>
       <label for="probe_date">Date: </label>
       <input type="date" name="probePhotoDate">
+      <button class="searchButton">Search Probe Photos</button>
       </form>
       <div>
         <div id="masterPhotos"></div>
