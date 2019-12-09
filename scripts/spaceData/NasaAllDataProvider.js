@@ -1,16 +1,42 @@
-let nasaPhotoData = []
+let nasaAllPhotoData = []
 
-export const useNasaPhotoDayData = () => nasaData
+export const useNasaData = () => {
+ return nasaAllPhotoData
+}
+export const getNasaCuriosityData = () => {
+  console.log("*****I AM THE NASA DATA COMPONENT*****")
+  return fetch("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=RD38aokcbHHcsbEjdZOo0CFfmShPd1DVCcETVXSN")
+    .then(response => response.json())
+    .then(
+      NasaCuriosity => {
+        NasaCuriosity.photos.forEach(element => {
+          nasaAllPhotoData.push(element)
+        })
+      })
+    }
 
-// export const getNasaPhotoDayData = () => {
-//   console.log("*****I AM THE NASA DATA COMPONENT*****")
-//   return fetch("https://api.nasa.gov/planetary/apod?api_key=RD38aokcbHHcsbEjdZOo0CFfmShPd1DVCcETVXSN")
-//     .then(response => response.json())
-//     .then(
-//       parsedNasaData => {
-//         console.table(parsedNasaData)
-//         nasaPhotoData = parsedNasaData.photos.slice()
-//         console.log("*****I FOR SURE HAVE THAT NASA DATA*****")
-//       }
-//     )
-// }
+export const getNasaOpportunityData = () => {
+  console.log("*****I AM THE NASA DATA COMPONENT*****")
+  return fetch("https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/photos?sol=1000&api_key=RD38aokcbHHcsbEjdZOo0CFfmShPd1DVCcETVXSN")
+    .then(response => response.json())
+    .then(
+      NasaOpportunity => {
+        NasaOpportunity.photos.forEach(element => {
+          nasaAllPhotoData.push(element)
+        })
+      })
+    }
+
+export const getNasaSpiritData = () => {
+  console.log("*****I AM THE NASA DATA COMPONENT*****")
+  return fetch("https://api.nasa.gov/mars-photos/api/v1/rovers/spirit/photos?sol=1000&api_key=RD38aokcbHHcsbEjdZOo0CFfmShPd1DVCcETVXSN")
+    .then(response => response.json())
+    .then(
+      NasaSpirit => {
+        NasaSpirit.photos.forEach(element => {
+          nasaAllPhotoData.push(element)
+          // console.table(nasaAllPhotoData)
+        });
+      })
+    }
+    

@@ -1,0 +1,16 @@
+.masterPhoto {
+  width: 24%;
+  margin: 0px 5px 10px 5px;
+  flex-basis: 24%;
+}
+
+#masterPhotos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* .masterPhotoCard {
+  display: flex;
+  flex-wrap: wrap;
+} */
