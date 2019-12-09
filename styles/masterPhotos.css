@@ -1,7 +1,10 @@
 .masterPhoto {
-  width: 24%;
-  margin: 0px 5px 10px 5px;
+  margin: 10px 5px 10px 5px;
   flex-basis: 24%;
+}
+
+.probeImage {
+  max-width: 200px;
 }
 
 #masterPhotos {
@@ -10,7 +13,6 @@
   justify-content: space-around;
 }
 
-/* .masterPhotoCard {
-  display: flex;
-  flex-wrap: wrap;
-} */
+iframe {
+  border: none;
+}

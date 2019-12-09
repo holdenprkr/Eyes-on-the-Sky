@@ -8,11 +8,9 @@ const bodyHTML = () => {
 
   <main>
     <section class="searchByDate">
-      <h3>SEARCH PHOTOS BY DATE</h3>
       <div>
-        <h5>MOST POPULAR PHOTO OF THE DAY:</h5>
+        <h2>MOST POPULAR PHOTO OF THE DAY:</h2>
         <div class="photoOfTheDayDiv"></div>
-        <h5>SEARCH RESULTS:</h5>
         <!-- Date search bar here -->
         <!-- Put photos from search here with JS 
           <article></article>
@@ -23,15 +21,21 @@ const bodyHTML = () => {
     
     <section class="masterPhotoList">
       <h2>MASTER PHOTO LIST</h2>
-      <h3>FILTER PHOTOS BY CAMERA</h3>
+      <h3>FILTER PHOTOS BY PROBE</h3>
+      <h3>SEARCH PHOTOS BY DATE</h3>
+      <form>
+      <label for="probe_choice">Probe: </label>
+      <select id="tutorial_choice">
+        <option value="0">Select a probe...</option>
+        <option value="1">curiosity</option>
+        <option value="2">opportunity</option>
+        <option value="3">spirit</option>
+      </select>
+      <label for="probe_date">Date: </label>
+      <input type="date" name="probePhotoDate">
+      </form>
       <div>
-        <h5>*All photos will go here*</h5>
         <div id="masterPhotos"></div>
-        <!-- Cam search bar here -->
-        <!-- Photo API Master list here
-        <article></article>
-        <article></article>
-        <article></article> -->
       </div>
     </section>
 
