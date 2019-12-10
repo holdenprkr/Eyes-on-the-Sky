@@ -1,0 +1,13 @@
+.PhotoOfDay {
+  flex-basis:50%;
+  max-width: 600px;
+  margin: 0px 5px 20px 10px;
+}
+
+.photoOfTheDayDiv {
+  display: flex;
+}
+
+.explanation {
+  margin: 0px 10px 10px 5px;
+}

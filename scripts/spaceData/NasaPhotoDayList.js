@@ -10,9 +10,9 @@ const PhotoDayListComponent = () => {
     if (photoOfTheDay.media_type === "image") {
       photoDay.innerHTML = `
     ${`
-      <img src="${photoOfTheDay.url}"></img>
-      <div>Copyright: ${photoOfTheDay.copyright}</div>
-      <p>${photoOfTheDay.explanation}</p>`
+      <img class="PhotoOfDay" src="${photoOfTheDay.url}"></img>
+      <p class="explanation">${photoOfTheDay.explanation}<br>Copyright: ${photoOfTheDay.copyright}</p>
+      `
         }
   `
     } else if (photoOfTheDay.media_type === "video") {

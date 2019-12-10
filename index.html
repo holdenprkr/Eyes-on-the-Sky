@@ -12,12 +12,17 @@
 <body id="bodyContent">
   <nav>
     <h1>EYES ON THE SKY</h1>
+    <ul>
+      <li><a href="#photoOfTheDayNav">PHOTO OF THE DAY</a></li>
+      <li><a href="#photoListNav">MARS PHOTOS</a></li>
+      <li><a href="#favPhotosNav">YOUR FAVORITES</a></li>
+    </ul>
   </nav>
 
   <main id="mainContainer">
     <section class="searchByDate">
       <div>
-        <h2>MOST POPULAR PHOTO OF THE DAY:</h2>
+        <h2 id="photoOfTheDayNav">NASA'S PHOTO OF THE DAY:</h2>
         <div class="photoOfTheDayDiv"></div>
         <!-- Date search bar here -->
         <!-- Put photos from search here with JS 
@@ -27,8 +32,8 @@
       </div>
     </section>
 
-    <section class="masterPhotoList">
-      <h2>MASTER PHOTO LIST</h2>
+    <section class="masterPhotoList" id="photoListNav">
+      <h2>MARS MASTER PHOTO LIST</h2>
       <h3>FILTER PHOTOS BY PROBE</h3>
       <h3>SEARCH PHOTOS BY DATE</h3>
       <form>
@@ -44,7 +49,7 @@
       </div>
     </section>
 
-    <section class="favPhotos">
+    <section class="favPhotos" id="favPhotosNav">
       <h3>YOUR FAVORITE PHOTOS</h3>
       <div>
         <h5>*Be able to add photos from master photo list and remove (maybe add notes as well)*</h5>
