@@ -1,0 +1,1 @@
+const eventHub = document.querySelector("#mainContainer")

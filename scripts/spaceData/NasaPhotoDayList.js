@@ -1,5 +1,6 @@
 import { useNasaPhotoDayData } from "./NasaPhotoDayProvider.js"
 
+const eventHub = document.querySelector("#bodyContent")
 
 const PhotoDayListComponent = () => {
   const photoDay = document.querySelector(".photoOfTheDayDiv")

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,55 @@
   <title>Eyes on the Sky</title>
   <link rel="stylesheet" href="./styles/main.css">
 </head>
+
 <body id="bodyContent">
+  <nav>
+    <h1>EYES ON THE SKY</h1>
+  </nav>
+
+  <main id="mainContainer">
+    <section class="searchByDate">
+      <div>
+        <h2>MOST POPULAR PHOTO OF THE DAY:</h2>
+        <div class="photoOfTheDayDiv"></div>
+        <!-- Date search bar here -->
+        <!-- Put photos from search here with JS 
+              <article></article>
+            <article></article>
+            <article></article> -->
+      </div>
+    </section>
+
+    <section class="masterPhotoList">
+      <h2>MASTER PHOTO LIST</h2>
+      <h3>FILTER PHOTOS BY PROBE</h3>
+      <h3>SEARCH PHOTOS BY DATE</h3>
+      <form>
+        <label for="probe_choice">Probe: </label>
+        <span id="probe_content_target">
+        </span>
+        <label for="probe_date">Date: </label>
+        <input type="date" name="probePhotoDate">
+        <button class="searchButton">Search Probe Photos</button>
+      </form>
+      <div>
+        <div id="masterPhotos"></div>
+      </div>
+    </section>
+
+    <section class="favPhotos">
+      <h3>YOUR FAVORITE PHOTOS</h3>
+      <div>
+        <h5>*Be able to add photos from master photo list and remove (maybe add notes as well)*</h5>
+        <!-- Print your fav photos here with JS
+            <article></article>
+            <article></article>
+            <article></article> -->
+      </div>
+    </section>
+
+  </main>
   <script type="module" src="./scripts/main.js"></script>
 </body>
+
 </html>
