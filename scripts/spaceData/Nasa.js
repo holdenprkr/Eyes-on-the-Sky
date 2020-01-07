@@ -3,8 +3,11 @@ export const nasaComponent = (object) => {
   <div class="masterPhoto">
   <img class="probeImage" src="${object.img_src}"></img>
   <div>Rover: ${object.rover.name}</div>
-  <div>Date: ${new Date(object.earth_date).toLocaleDateString('en-US')}</div>
+  <div>Date: ${object.earth_date}</div>
   <div>Camera: ${object.camera.name}</div>
   </div>
   `
 }
+
+
+// ${new Date(object.earth_date).toLocaleDateString('en-US')}

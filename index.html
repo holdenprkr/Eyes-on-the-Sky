@@ -33,16 +33,12 @@
     </section>
 
     <section class="masterPhotoList" id="photoListNav">
-      <h2>MARS MASTER PHOTO LIST</h2>
-      <h3>FILTER PHOTOS BY PROBE</h3>
-      <h3>SEARCH PHOTOS BY DATE</h3>
+      <h2>MARS PHOTOS</h2>
+      <h4>PLEASE SELECT A DATE</h4>
       <form>
-        <label for="probe_choice">Probe: </label>
-        <span id="probe_content_target">
-        </span>
         <label for="probe_date">Date: </label>
-        <input type="date" name="probePhotoDate">
-        <button class="searchButton">Search Probe Photos</button>
+        <input type="date" name="probePhotoDate" id="date_choice" />
+        <button class="searchButton" id="masterPhotosDateSearch">Search Probe Photos</button>
       </form>
       <div>
         <div id="masterPhotos"></div>

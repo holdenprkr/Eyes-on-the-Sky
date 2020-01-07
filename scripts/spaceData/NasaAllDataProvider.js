@@ -1,10 +1,13 @@
 let nasaAllPhotoData = []
 
 export const useNasaData = () => {
- return nasaAllPhotoData
+  console.log("use nasa called", nasaAllPhotoData)
+ return nasaAllPhotoData.slice()
 }
-export const getNasaCuriosityData = () => {
-  return fetch("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=RD38aokcbHHcsbEjdZOo0CFfmShPd1DVCcETVXSN")
+
+const getNasaCuriosityData = (day) => {
+  console.log('this is curiosity arg', day)
+  return fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=${day}&api_key=RD38aokcbHHcsbEjdZOo0CFfmShPd1DVCcETVXSN`)
     .then(response => response.json())
     .then(
       NasaCuriosity => {
@@ -14,8 +17,10 @@ export const getNasaCuriosityData = () => {
       })
     }
 
-export const getNasaOpportunityData = () => {
-  return fetch("https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/photos?sol=1000&api_key=RD38aokcbHHcsbEjdZOo0CFfmShPd1DVCcETVXSN")
+const getNasaOpportunityData = (day) => {
+  console.log('this is opportunity arg', day)
+
+  return fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/photos?earth_date=${day}&api_key=RD38aokcbHHcsbEjdZOo0CFfmShPd1DVCcETVXSN`)
     .then(response => response.json())
     .then(
       NasaOpportunity => {
@@ -25,8 +30,10 @@ export const getNasaOpportunityData = () => {
       })
     }
 
-export const getNasaSpiritData = () => {
-  return fetch("https://api.nasa.gov/mars-photos/api/v1/rovers/spirit/photos?sol=1000&api_key=RD38aokcbHHcsbEjdZOo0CFfmShPd1DVCcETVXSN")
+const getNasaSpiritData = (day) => {
+  console.log('this is spirit arg', day)
+
+  return fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/spirit/photos?earth_date=${day}&api_key=RD38aokcbHHcsbEjdZOo0CFfmShPd1DVCcETVXSN`)
     .then(response => response.json())
     .then(
       NasaSpirit => {
@@ -36,4 +43,11 @@ export const getNasaSpiritData = () => {
         });
       })
     }
+
+export const GetAllData = (date) => {
+  nasaAllPhotoData = []
+  return getNasaCuriosityData(date)
+          .then(getNasaOpportunityData(date))
+          .then(getNasaSpiritData(date))
+}
     

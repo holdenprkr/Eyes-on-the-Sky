@@ -1,3 +1,3 @@
 const Probes = ["Curiosity", "Opportunity", "Spirit"]
 
-export const useProbes = () => Probes
+export const useProbes = () => Probes.slice()
